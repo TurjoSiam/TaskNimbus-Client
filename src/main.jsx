@@ -5,12 +5,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+import FrontPage from './Pages/FrontPage/FrontPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <FrontPage></FrontPage>,
   },
 ]);
 

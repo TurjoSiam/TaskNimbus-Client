@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.front-bg {
+  background-image: url('/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.custom-btn {
+  background: linear-gradient(135deg, #ca0000, #b90000);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Hover Effect */
+.custom-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #bd1c1c, #be0000);
+  box-shadow: 0 6px 15px rgba(255, 0, 0, 0.7);
+}
+
+/* Ripple Effect */
+.custom-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out, opacity 0.4s;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.custom-btn:active::after {
+  width: 0;
+  height: 0;
+  opacity: 1;
+  transition: 0s;
+}
