@@ -8,6 +8,7 @@ import './index.css'
 import FrontPage from './Pages/FrontPage/FrontPage';
 import Login from './Pages/Login/Login';
 import AuthProvider from './Context/AuthProvider';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login></Login>
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>
   }
 ]);
 
