@@ -62,3 +62,25 @@
   opacity: 1;
   transition: 0s;
 }
+
+.back-btn {
+  background: linear-gradient(135deg, #1a1dbd, #193fe3);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 70, 199, 0.495);
+  width: fit-content;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #0053b2, #057db9);
+  box-shadow: 0 6px 15px rgba(5, 141, 245, 0.7);
+}

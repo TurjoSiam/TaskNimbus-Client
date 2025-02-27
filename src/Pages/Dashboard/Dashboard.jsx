@@ -1,11 +1,14 @@
 
+import TaskDisplay from "../TaskDisplay/TaskDisplay";
+
 
 const Dashboard = () => {
     return (
-        <div>
-            <h2>this is dashboard page</h2>
+        <div className="h-screen flex items-center justify-center bg-gray-100">
+            <TaskDisplay></TaskDisplay>
         </div>
     );
 };
+
 
 export default Dashboard;

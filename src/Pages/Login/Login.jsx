@@ -3,9 +3,10 @@ import google from "../../assets/google.json"
 import Lottie from "lottie-react";
 import { useContext } from "react";
 import AuthContext from "../../Context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { RiArrowGoBackFill } from "react-icons/ri";
 
 
 
@@ -56,7 +57,10 @@ const Login = () => {
                 <div>
                     <Lottie className="max-w-xs" animationData={google}></Lottie>
                 </div>
-                <button onClick={handleGoogleLogin} className="custom-btn flex items-center gap-3"><FaGoogle /> Connect With Google</button>
+                <div className="flex items-center gap-3">
+                    <button onClick={handleGoogleLogin} className="custom-btn flex items-center gap-3"><FaGoogle /> Connect With Google</button>
+                    <Link to="/" className="back-btn flex items-center gap-1"><RiArrowGoBackFill /> Back</Link>
+                </div>
             </div>
         </div>
     );
