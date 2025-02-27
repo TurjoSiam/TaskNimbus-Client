@@ -9,12 +9,14 @@ import FrontPage from './Pages/FrontPage/FrontPage';
 import Login from './Pages/Login/Login';
 import AuthProvider from './Context/AuthProvider';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <FrontPage></FrontPage>,
+    errorElement: <ErrorPage></ErrorPage>
   },
   {
     path: "/login",
