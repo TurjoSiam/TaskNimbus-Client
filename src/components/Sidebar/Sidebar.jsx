@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GoTasklist } from "react-icons/go";
 import { MdDashboard } from "react-icons/md";
-import AddTaskModal from "../Task/AddTaskModal";
+import AddTaskModal from "../../Pages/AddTaskModal/AddTaskModal";
 
 
 const Sidebar = () => {

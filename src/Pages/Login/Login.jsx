@@ -28,15 +28,12 @@ const Login = () => {
 
             const response = await axios.post("http://localhost:5000/users", userInfo)
             console.log(response);
-
-            if (response?.data?.insertedId) {
-                Swal.fire({
-                    title: "Success",
-                    text: "You've Logged in Successfully",
-                    icon: "success"
-                });
-                navigate("/dashboard")
-            }
+            Swal.fire({
+                title: "Success",
+                text: "You've Logged in Successfully",
+                icon: "success"
+            });
+            navigate("/dashboard")
 
         }
         catch (error) {

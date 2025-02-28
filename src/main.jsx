@@ -10,6 +10,7 @@ import Login from './Pages/Login/Login';
 import AuthProvider from './Context/AuthProvider';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 
 const router = createBrowserRouter([
@@ -28,12 +29,14 @@ const router = createBrowserRouter([
   }
 ]);
 
-
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </AuthProvider>
   </StrictMode>,
 )

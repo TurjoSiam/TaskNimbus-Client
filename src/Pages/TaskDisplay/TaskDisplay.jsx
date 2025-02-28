@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { MdClose } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import TasksContainer from "../components/Task/TasksContainer";
+import TasksContainer from "../TasksContainer/TasksContainer";
 import AuthContext from "../../Context/AuthContext";
 
 const TaskDisplay = () => {
